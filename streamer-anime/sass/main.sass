@@ -1,0 +1,320 @@
+@use 'variaveis/variaveis'
+@use 'componentes/componentes'
+@use 'componentes/mobile'
+@mixin into() 
+   font-weight: bold
+   letter-spacing: 1px
+   color: variaveis.$corPrimaria
+   font-size: 30px
+
+@mixin home()
+  color: variaveis.$corPrimariaUm  
+  font-size: 25px
+
+@mixin recomendacao()
+  
+  color: variaveis.$corPrimaria
+   
+@mixin textorecomendacao()
+   color: variaveis.$corPrimariaUm
+
+    
+
+@mixin descricao()
+   color: variaveis.$corPrimariaUm
+      
+#canime, #canimename
+    @include into()
+
+#descricao
+    @include descricao()
+    
+#home
+    @include home()
+    
+#alta
+    @include recomendacao()
+    
+#frase
+    @include textorecomendacao()
+
+nav
+        @include mobile.barra()
+          margin-left: 0px
+          width: 100%
+          
+
+           
+        height: 60px
+        //background-color: blue
+
+        
+        position: sticky
+        top: 0
+        width: 94%
+        margin-left: 40px
+        z-index: 9
+        //position: relative
+        #canime
+            position: absolute
+            bottom: 15px
+            cursor: pointer 
+        #home
+            position: absolute
+            margin-left: 20%
+
+        input[type="text"]
+            @include mobile.barra()
+              margin-left: 60%
+              width: 300px
+            @include mobile.btn()
+              width: 150px
+            
+            position: absolute
+            border: none
+            outline: none
+            margin-left: 70%
+            width: 330px
+            height: 35px
+            border-radius: 30px
+            //background-color: variaveis.$corSegundaria
+            bottom: 15px
+            color: variaveis.$corSegundaria
+            padding-left: 34px
+            border: 1px solid variaveis.$corSegundaria
+        .select
+            @include mobile.barra()
+              bottom: -4px
+              margin-left: 130px
+              width: 157px
+
+            position: absolute
+            bottom: 1px
+
+            width: 305px
+            height: 50px
+          
+            //background-color: #fff
+            margin-left: 450px
+            .selected 
+               //background-color: #ccc
+               padding: 5px 10px
+               cursor: pointer
+               p
+                color: variaveis.$corSegundaria
+            .items 
+               margin-left: 13px
+               p
+                color: variaveis.$corSegundaria
+               display: none
+               position: absolute
+               cursor: pointer
+               //background-color: #fff
+               width: 100%
+               border-left: 1px solid variaveis.$corSegundaria
+               
+               div 
+                 padding: 5px 10px
+                 p
+                   &:hover
+                    color: #f1f1f1
+header
+    //background-color: red
+    height: 420px
+    
+    
+
+            
+    #alta
+        margin-left: 75px
+        margin-top: 30px  
+        @include mobile.barra()
+          margin-left: 0px 
+    #frase
+        margin-left: 75px
+        @include mobile.barra()
+          margin-left: 0px
+    #banner
+      @include mobile.banner()
+        margin-left: 0px
+        width: 100%
+        border-radius: 0px      
+      margin-top: 4px
+      position: relative
+      width: 88%
+      height: 80%   
+      margin-left: 75px
+       
+      border-radius: 10px
+      background-image: linear-gradient(rgba(0, 0, 0, 0.647), rgb(0 0 0 / 89%)), url(variaveis.$imagem)
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      h2
+        position: absolute
+        bottom: 93px
+        margin-left: 20px
+      p
+        position: absolute
+        bottom: 30px
+        margin-left: 20px
+      #um,#dois,#tres
+        position: absolute
+        width: 20px
+        height:20px
+        border: 1px solid variaveis.$corSegundaria
+        background-color: transparent
+        cursor: pointer
+        border-radius: 50%
+        margin-left: 90%
+        top: 13px
+      #um
+        @include mobile.passagembt()
+          margin-left: 85%
+        background-color: variaveis.$corSegundaria
+      #dois
+        @include mobile.passagembt()
+          margin-left: 91%
+        margin-left: 93%
+    
+      #tres
+        margin-left: 96%
+
+#catalogo
+    width: 88%
+    height: 50px
+    margin-left: 75px
+    h1
+        color: variaveis.$corPrimaria
+
+img
+    width: 180px
+    height: 250px
+    border-radius: 25px 
+    padding-left: 15px
+    opacity: 0.3
+    cursor: pointer
+    transition: 0.5s
+    &:hover
+        opacity: 1
+.lista
+    @include mobile.lista()
+      flex-direction: column
+      height: 700px
+      img
+        width: 206px
+        height: 206px
+        
+
+      
+    #genero-atx
+      //background-color: blue
+      flex: 2
+    #genero-aty
+      flex: 2
+      //background-color: pink
+    height: 307px
+    width: 88%
+    height: 270px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-left: 75px 
+      
+#watch
+    @include mobile.caixawatch()
+      flex-direction: column
+    
+    width: 100%
+    height: calc( 100vh - 60px )
+    //background-color: red
+    display: flex
+    #watchAnime, #popular
+        @include mobile.caixawatch()
+          width: 100%
+            
+        width: 49px
+        height: 100%
+
+    #watchAnime
+        @include mobile.caixawatch()
+          align-items: center
+          justify-content: center
+          iframe
+            width: 100%
+            height: 380px
+        flex: 1
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        //background-color: blue
+        #passagem
+            @include mobile.caixawatch()
+              width: 100%
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 632px
+            height: 50px
+            
+            .fa-solid
+                font-size: 30px
+                color: variaveis.$corSegundaria
+                cursor: pointer
+                background-color: transparent
+                transition-delay: 0.2s
+                &:hover
+                    color: variaveis.$corPrimaria
+        h2
+            justify-content: start  
+            color: variaveis.$corPrimaria
+        
+        
+        #episodios
+            @include mobile.caixawatch()
+              width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            
+            width: 632px
+            height: 140px
+            
+            ul
+                li
+                    list-style-type: none
+                    font-size: 25px
+                    p
+                        color: variaveis.$corSegundariaUm
+                        cursor: pointer
+                        &:hover
+                           color: variaveis.$corSegundaria
+            .fa-solid
+                font-size: 25px
+                color: variaveis.$corSegundaria
+                cursor: pointer
+                &:hover
+                    color: variaveis.$corSegundariaUm
+            
+
+    #popular
+        flex: 1
+        .lista
+            @include mobile.caixawatch()
+              width: 100%
+              height: 400px
+              margin-lef: 0px
+              
+              img
+                width: 330px
+                height: 330px
+              margin-left: 0px
+            margin-left: 33px
+//mobile
+//972
+//reset 
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    background-color: variaveis.$planoDeFundo   
