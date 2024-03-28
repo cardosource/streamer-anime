@@ -6,7 +6,7 @@ Além disso, a implementação de funções compostas no JavaScript demonstra um
 
 A interface do Canime se destaca pela sua leveza visual, resultado de uma cuidadosa seleção de elementos de design e otimização de recursos, proporcionando uma experiência de usuário fluida e intuitiva
 
-## Layout
+
 
 <div>
   
