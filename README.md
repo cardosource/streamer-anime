@@ -1,7 +1,7 @@
 # Canime - streamer anime
 
 
-O projeto **Canime** apresenta uma abordagem técnica refinada, incorporando tecnologias como Sass para uma gestão eficiente de estilos, permitindo uma organização e manutenção simplificadas do código CSS.                          
+**Canime** apresenta uma abordagem técnica refinada, incorporando tecnologias como Sass para uma gestão eficiente de estilos, permitindo uma organização e manutenção simplificadas do código CSS.                          
 Além disso, a implementação de funções compostas no JavaScript demonstra uma estruturação avançada, possibilitando um controle mais preciso e eficaz das operações no lado do cliente.
 
 A interface do Canime se destaca pela sua leveza visual, resultado de uma cuidadosa seleção de elementos de design e otimização de recursos, proporcionando uma experiência de usuário fluida e intuitiva
